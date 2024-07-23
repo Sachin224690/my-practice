@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css template</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+/*style the header*/
+.header{
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+/*container for flexbox*/
+.row{
+    display: -webkit-flex;
+    display: flex;
+}
+/* create three equeal columns that sites next to each other*/
+.column{
+    -webkit-flex:1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    height: 300px;/*should be removed only for demonstration*/
+
+}
+
+/*style the footer*/
+.footer{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+/* responsive layout - makes the three columns stack on the of each other instead of next to each other*/
+@media (max-width:600px){
+.row{
+    -webkit-flex-direction:column;
+    flex-direction: column;
+}
+}
+
+    </style>
+</head>
+<body>
+    <h2>css template using flexbox</h2>
+    <p>in this example we have created a header three equal column and a footer on equal columns and a footer on smaller screens the columns will stack on top of each other</p>
+    <p>resize the browser window to see the responsive effect.</p>
+    <div class="header">
+        <h2>header</h2>
+    </div>
+
+    <div class="row">
+        <div class="column" style="background-color: #aaa;">column</div>
+        <div class="column" style="background-color: #bbb;">column</div>
+        <div class="column" style="background-color: #ccc;">column</div>
+
+    </div>
+    <div class="footer">
+        <p>footer</p>
+    </div>
+</body>
+</html>
